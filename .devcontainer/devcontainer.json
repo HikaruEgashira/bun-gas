@@ -1,0 +1,15 @@
+{
+	"name": "bun",
+ 	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": []
+		}
+	},
+
+	"remoteUser": "vscode"
+}
