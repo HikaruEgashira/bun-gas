@@ -1,7 +1,6 @@
 # GAS with Bun
 
-Work in progress.
-Until implement the esbuild hooks `onEnd `
+![ScreenShot in script.google.com](./screenshot.png)
 
 ## License
 
