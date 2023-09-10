@@ -14,7 +14,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "dev": "bun run src/env/dev.ts",
+    "dev": "bun run src/dev.ts",
     "push": "bun run src/push.ts"
   }
 }

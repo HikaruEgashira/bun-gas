@@ -1,18 +1,17 @@
 import { expect, test, beforeEach } from "bun:test";
-import { GasServices } from "./gas";
+import { IGasServices } from "./gas";
 import { fixture } from "../app/id.test";
 
-let mockGas: GasServices;
+let mockGasService: IGasServices;
 
 beforeEach(() => {
-    mockGas = {
-        main: () => { },
-        listId: () => Promise.resolve(fixture),
+    mockGasService = {
+        listId: () => fixture,
     };
 });
 
 test("id must be unique", async () => {
-    const ids = await mockGas.listId();
+    const ids = mockGasService.listId();
     const uniqueIds = [...new Set(ids.map((id) => id.id))];
     expect(ids.map((id) => id.id)).toStrictEqual(uniqueIds);
 });

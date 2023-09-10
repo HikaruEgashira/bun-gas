@@ -12,9 +12,17 @@ graph LR
   EntryPoint --> Services
 ```
 
-## Log
+## App
 
-```sh
-bun x @google/clasp login
-bun x @google/clasp create --title "GAS with Bun" --type standalone
-```
+- ビジネスドメイン
+- ビジネスロジック
+
+## Services
+
+- 外部リソース
+- DB
+- リポジトリパターン
+
+## EntryPoint
+
+- 実行されるスクリプト

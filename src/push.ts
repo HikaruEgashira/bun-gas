@@ -2,7 +2,7 @@ const generateEntryFunctions: (i: string) => { entryPointFunctions: string } = r
 
 // Bun Bundler
 const build = await Bun.build({
-  entrypoints: ["src/env/dev.ts"],
+  entrypoints: ["src/prod.ts"],
   outdir: "dist",
 });
 
@@ -10,8 +10,6 @@ const build = await Bun.build({
 const artifact = build.outputs[0];
 const babeledCode = await Bun.file(artifact.path).text();
 const output = generateEntryFunctions(babeledCode);
-console.log(output);
-
 await Bun.write(artifact.path, `const global=this;\n${output.entryPointFunctions}\n(() => {\n${babeledCode}\n})();`);
 
 // Clasp Push
