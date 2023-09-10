@@ -1,0 +1,18 @@
+{
+  "name": "bun-gas",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "bun-types": "latest",
+    "eslint": "^8.49.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "start": "bun run src/env/dev.ts",
+    "build": "bun run src/build.ts"
+  }
+}
