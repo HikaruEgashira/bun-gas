@@ -8,11 +8,12 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-      - name: Setup Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.bun/install/cache
-          key: ${{ hashFiles('**/bun.lockb') }}
+      # Cacheした方が遅くなる
+      # - name: Setup Cache
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: ~/.bun/install/cache
+      #     key: ${{ hashFiles('**/bun.lockb') }}
       - run: bun install
       - name: Test
         run: bun test
