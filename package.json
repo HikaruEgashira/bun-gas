@@ -2,7 +2,9 @@
   "name": "bun-gas",
   "module": "index.ts",
   "type": "module",
-  "dependencies": { "gas-entry-generator": "^2.5.1" },
+  "dependencies": {
+    "gas-entry-generator": "^2.5.1"
+  },
   "devDependencies": {
     "bun-types": "latest",
     "eslint": "^8.49.0",
@@ -12,7 +14,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "start": "bun run src/env/dev.ts",
-    "build": "bun run src/build.ts"
+    "dev": "bun run src/env/dev.ts",
+    "push": "bun run src/push.ts"
   }
 }
