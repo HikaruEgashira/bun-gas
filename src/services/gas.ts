@@ -1,6 +1,6 @@
-import { Todo } from "../app/todo";
+import { Id } from "../app/id";
 
 export interface GasServices {
     main(): void;
-    listTodo(): Promise<Todo[]>;
+    listId(): Promise<Id[]>;
 }
