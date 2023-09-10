@@ -14,6 +14,6 @@ jobs:
       #   with:
       #     path: ~/.bun/install/cache
       #     key: ${{ hashFiles('**/bun.lockb') }}
-      - run: bun install
+      - run: bun install --no-save
       - name: Test
         run: bun test
