@@ -6,8 +6,8 @@ jobs:
   cicd:
     runs-on: [self-hosted, linux, arm64, hikae-flash]
     steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
       # Cacheした方が遅くなる
